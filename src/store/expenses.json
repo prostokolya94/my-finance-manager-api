@@ -1,0 +1,28 @@
+[
+  {
+    "date": [
+      2025,
+      11,
+      1
+    ],
+    "groceries": 100,
+    "home": 50,
+    "transport": 20,
+    "clothes": 30,
+    "restaurant": 40,
+    "other": 10
+  },
+  {
+    "date": [
+      2025,
+      11,
+      2
+    ],
+    "groceries": 1,
+    "transport": 2,
+    "home": 3,
+    "clothes": 4,
+    "restaurant": 5,
+    "other": 6
+  }
+]
