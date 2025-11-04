@@ -1,7 +1,9 @@
+import 'dotenv/config';
 import express, { Request, Response} from "express";
 import cors from 'cors';
 import {ExpenseController} from "./controllers/ExpenseController";
 import {ExpenseReducer} from "./reducers/ExpenseReducer";
+
 
 const app = express();
 app.use(cors());
