@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 
-const basePath = process.env.ROOT === "src" ? __dirname : '/app' // базовый путь в контейнере
-const storePath = path.join(basePath, '../store');
-const dataPath = path.join(storePath, 'expenses.json');
+const basePath = process.env.ROOT === "src" ? path.join(__dirname, "../store") : '/app/store' // базовый путь в контейнере
+console.log(basePath);
+const dataPath = path.join(basePath, 'expenses.json');
 
 function readExpenses() {
     try {
@@ -17,9 +17,6 @@ function readExpenses() {
 
 function writeExpenses(data: any[]) {
     try {
-        if (!fs.existsSync(storePath)) {
-            fs.mkdirSync(storePath, { recursive: true });
-        }
         fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     } catch (error) {
         console.error('Error writing expenses:', error);
