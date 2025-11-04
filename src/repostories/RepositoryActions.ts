@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const basePath = process.env.ROOT === "src" ? path.join(__dirname, "../store") : '/app/store' // базовый путь в контейнере
+const basePath = process.env.ROOT === "src" ? path.join(__dirname, "../store") : '/app/dist/store' // базовый путь в контейнере
 console.log(basePath);
 const dataPath = path.join(basePath, 'expenses.json');
 
