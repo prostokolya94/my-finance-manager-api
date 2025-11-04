@@ -11,6 +11,8 @@ RUN npm install
 # Копируем исходники и tsconfig
 COPY src ./src
 COPY tsconfig.json ./
+RUN mkdir -p dist/src/store
+COPY src/store/expenses.json dist/src/store/
 
 # Компилируем TypeScript
 RUN npx tsc
