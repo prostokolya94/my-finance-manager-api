@@ -25,9 +25,7 @@ RUN npm install --production
 
 # Копируем скомпилированный код из builder
 COPY --from=builder /app/dist ./dist
-
-RUN mkdir -p dist/src/store
-COPY src/store/expenses.json dist/src/store/
+COPY --from=builder /app/dist/store/expenses.json ./dist/store/
 
 # Открываем порт (ваш сервер слушает 8000)
 EXPOSE 8000
